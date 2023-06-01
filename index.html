@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <title>微創新與應用</title>
+
+  <link rel="stylesheet" href="dist/reset.css" />
+  <link rel="stylesheet" href="dist/reveal.css" />
+  <link rel="stylesheet" href="dist/theme/solarized.css" />
+
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown data-separator-vertical="------">
+        <textarea data-template>
+          # 微創新與應用
+
+          111213515 資管碩二 謝禹沆
+          ---
+          # 虛擬寶物交易系統
+          ------
+          ## 一、概述
+
+          使用區塊鏈與 OAuth 2.0 的授權概念來設計的虛擬寶物交易系統
+          ------
+          ## 二、系統概念
+
+          - **區塊鏈技術**：區塊鏈技術可以用來創建一個公開、透明、且不可更改的虛擬寶物交易記錄。每次交易都將被記錄在區塊鏈上，並且這些記錄是永久且不可篡改的。
+          - **OAuth 2.0 授權**：遊戲商可以申請成為第三方應用，並讓使用者透過他們的遊戲帳號進行虛擬寶物的交易。OAuth 2.0 授權機制確保了安全性和隱私性，同時也為使用者提供了便利性。
+          - **智能合約**：在交易的過程觸發事件，進行對應的操作
+          ------
+          ## 三、系統流程
+
+          1. 使用者註冊與身份確認
+          2. 將寶物在遊戲內銷毀或者標記為已轉售後，製成 token
+          3. 上架虛擬寶物
+          3. 等待購買人進行交易
+          4. 交易完成後購買人可以透過 token 在遊戲內部重新生成寶物
+          ------
+          ## 四、系統優勢
+
+          - **透明性與信任性**：所有的交易都會在區塊鏈上進行記錄，這降低了詐騙和不誠實交易的風險。
+          - **所有權證明**：每個虛擬寶物都可以有一個獨一無二的標識，這標識可以證明誰是該寶物的擁有者。
+          - **安全性**：OAuth 2.0 授權機制可以保護使用者的資料不被非法存取，同時，遊戲商也可以透過這個機制驗證使用者的身份。
+          - **使用者友好**：使用者可以使用他們現有的遊戲帳號來登入系統，而無需創建一個新的帳號。
+          - **跨平台交易**：虛擬寶物可以在不同的平台和遊戲之間進行交易，這提高了寶物的流通性和價值。
+          ------
+          ## 五、結語
+
+          本報告對使用區塊鏈與 OAuth 2.0 來設計虛擬寶物交易系統的概念進行了初步的探討。透明、安全的交易與方便的使用體驗是此系統設計的主要目標。在實際應用中，可能需要考慮更多的技術和商業因素來優化和完善系統。
+        </textarea>
+      </section>
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMarkdown],
+    });
+  </script>
+</body>
+
+</html>
